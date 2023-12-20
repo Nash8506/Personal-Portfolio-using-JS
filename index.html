@@ -23,7 +23,7 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Web Designer</p>
+                <p>Full stack developer</p>
                 <h1>Hi, I am <span>Nashid</span> from <br> Malappuram, Kerala</h1>
             </div>
         </div>
@@ -38,15 +38,55 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, fugit? Repellat eveniet eligendi nemo tenetur dicta soluta minus fugiat consequatur necessitatibus optio harum nihil commodi, explicabo at omnis! Sapiente, doloremque?</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</pc>
-                        <p class="tab-links">Experience</pc>
-                        <p class="tab-links">Education</pc>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</pc>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</pc>
+                        <p class="tab-links"onclick="opentab('education')">Education</pc>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development</span><br>Creating the user interface and handling interactions using technologies like HTML, CSS, and JavaScript.
+                            </li>
+                            <li><span>Back-end Development</span><br>Managing the server, database, and application logic to respond to front-end requests.</li>
+                            <li><span>Database</span><br>Storing and retrieving data efficiently to support the functionality of the application.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 to current</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </li>
+                            <li><span>2022 to 2023</span><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, animi.</li>
+                            <li><span>2021 to 2022</span><br>Lorem ipsum dolor sit amet consectetur.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2015</span><br>B.Sc from Yuvaraja's collage, Mysore
+                            </li>
+                            <li><span>2012</span><br>PUC in PCMB from Boys higher secondary school, Manjeri - Malappuram</li>
+                            <li><span>2010</span><br>High school and SSLC from Boys higher secondary school, Manjeri - Malappuram
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+    }
+}
+</script>
 
 </body>
 </html>
