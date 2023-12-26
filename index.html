@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="./images/NashidLogo.png" class="logo">
-                <ul>
+                <ul class="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full stack developer</p>
@@ -135,6 +137,37 @@
     </div>
 </div>
 
+<!-- ---------------------contact---------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> kp.nashid.nashid@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 7996608506</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="./Nashid's Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Nashid. Made with Love <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
 <script>
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
@@ -149,6 +182,17 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+</script>
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+ function openmenu(){
+sidemenu.style.right = "0";
+ }
+ function closemenu(){
+    sidemenu.style.right = "-200px"
+ }
+
 </script>
 
 </body>
